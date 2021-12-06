@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        background: #000000;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (min-width: 950px) and (max-width: 1199px) {
+        .grid-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 949px) {
+        .grid-container {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(12, 150px);
+        }
+      }
+
+      .grid-child {
+        /* width: ; */
+        background-color: aqua;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-child"></div>
+      <div class="grid-child"></div>
+      <div class="grid-child"></div>
+      <div class="grid-child"></div>
+      <div class="grid-child"></div>
+      <div class="grid-child"></div>
+      <div class="grid-child"></div>
+      <div class="grid-child"></div>
+      <div class="grid-child"></div>
+      <div class="grid-child"></div>
+      <div class="grid-child"></div>
+      <div class="grid-child"></div>
+    </div>
+  </body>
+</html>
